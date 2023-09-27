@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05 - seleção</title>
+    <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+    <div id="quad">
+        <h2> <div id="titulo">Escolha a operação:</div></h2> 
+        <div id="entradatext">
+            Informe o primeiro número <input type="number" id="n1E"/>
+        </div>
+        <div id="entradatext">
+            Informe o segundo número <input type="number" id="n2E"/>
+        </div>
+        <table>
+            <tr>
+                <td>ESCOLHA DO USUÁRIO</td>
+                <td>OPERAÇÃO</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Média dos números</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Diferença do Maior pelo menor</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Produto entre eles</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Divisão do primeiro pelo segundo</td>
+            </tr>
+        </table>
+        <div id="entradatext">
+            Informe a operação <input type="number" id="n3E"/>
+        </div>
+        <div id="entradaBut">
+            <!-- localizada no exercicios.js-->
+            <button id="calculaEscolha" onclick="calculaEscolha()"> Calcular</button>
+        </div>
+        <br>
+        <h2>A resposta irá aparecer aqui</h2>
+        <div>
+            <p id="calc05"></p>
+        </div>
+        <a href="../index.html"><button id="Voltar">Pagina Inicial</button></a>
+        <script src="../script.js"></script>
+    </div>
+</body>
+</html>
