@@ -82,54 +82,7 @@ function calculaEscolha(){
     // saída dos dados
     document.getElementById("calc05").innerHTML = resultado
 }
-function calculaLosango(){
-    let dM = Number(document.getElementById('dM').value);
-    let dm = Number(document.getElementById('dm').value);
-    let calc = (dM*dm)/2
-    Number(document.getElementById('calc11').innerHTML = "valor da area é" + calc )
 
-}
-function calculaSalario(){
-    let sM = Number(document.getElementById('sM').value);
-    let sF = Number(document.getElementById('sF').value);
-    let calc = (sF/sM)
-    Number(document.getElementById('calc12').innerHTML = "o salario do funcionário possui " + calc + " salários minímos")
-}
-function calculaTabuada(){
-    let tab = Number(document.getElementById('tab').value);
-    let calcA = tab*1
-    let calcB = tab*2
-    let calcC = tab*3
-    let calcD = tab*4
-    let calcE = tab*5
-    let calcF = tab*6
-    let calcG = tab*7
-    let calcH = tab*8
-    let calcI = tab*9
-    let calcJ = tab*10
-    Number(document.getElementById('calc13a').innerHTML = tab + " x 1 = " + calcA )
-    Number(document.getElementById('calc13b').innerHTML = tab + " x 2 = " + calcB )
-    Number(document.getElementById('calc13c').innerHTML = tab + " x 3 = " + calcC )
-    Number(document.getElementById('calc13d').innerHTML = tab + " x 4 = " + calcD )
-    Number(document.getElementById('calc13e').innerHTML = tab + " x 5 = " + calcE )
-    Number(document.getElementById('calc13f').innerHTML = tab + " x 6 = " + calcF )
-    Number(document.getElementById('calc13g').innerHTML = tab + " x 7 = " + calcG )
-    Number(document.getElementById('calc13h').innerHTML = tab + " x 8 = " + calcH )
-    Number(document.getElementById('calc13i').innerHTML = tab + " x 9 = " + calcI )
-    Number(document.getElementById('calc13j').innerHTML = tab + " x 10 = " + calcJ )
-
-}
-function calculaIdade(){
-    let idade = new Date(document.getElementById('DataNasci').value);
-    let calc = Math.floor((Date.now() - idade) / (31557600000));
-    Date(document.getElementById('calc14').innerHTML = "idade em anos = " + calc + " anos")
-    Date(document.getElementById('calc14a').innerHTML = "idade em meses = " + calc + " anos")
-    Date(document.getElementById('calc14b').innerHTML = "idade em dias = " + calc + " anos")
-    Date(document.getElementById('calc14c').innerHTML = "idade em semanas = " + calc + " anos")
-}
-
-
-//lista02
 function calculaNota(){
     let n1 = Number(document.getElementById('nota1').value);
     let n2 = Number(document.getElementById('nota2').value);
@@ -524,8 +477,6 @@ function calculaCategoria(){
         document.getElementById("calc24").innerHTML = "Categoria Inválida"
     }
 
-
-
     //imposto
     if(categoria == 2 && situacao == "R"){
         valorImposto = preco*0.05
@@ -560,10 +511,6 @@ function calculaCategoria(){
     }else{
         document.getElementById("calc24_2").innerHTML = "Imposto Inválido"
     }
-
-
-
-
     //classificação
     if(valorProd<=50){
         cla = "Barato"
@@ -597,54 +544,186 @@ function calculaGrati(){
 }
 
 
+//lista02
+function calculaSub(){
+    let n = Number(document.getElementById("n1").value);
+    let n2 = Number(document.getElementById("n2").value);
 
-
-//repeticaoExemplo
-function calculaMediaIdades(){
-    let conta = 1
-    let total = 0
-     
-    while (conta <= 10){
-        let idade = Number(prompt('Informe a idade'))
-        conta = conta +1
-        total = total + idade
-    }
-    
-    console.log('a media é ' +total/10)
-}
-//repeticaoExemplo
-function calculaMediaIdades(){
-    let i = Number(prompt('Informe a qnt de idades'))
-    let conta = 1
-    let total = 0
-     
-    while (conta <= i){
-        let idade = Number(prompt('Informe a idade'))
-        conta = conta +1
-        total = total + idade
-    }
-    
-    console.log('a media é ' +total/10)
-}
-//vetor para soma de pares
-function VetorSomarPares(){
-    let vet = [];
-    let soma = 0;
-    for(let i = 0;i<10;i++){
-        vet[i] = Number(prompt("Escreva 10 notas"))
-    }
-    for(let i = 0;i<10;i++){
-        if(vet[i]%2 == 0){
-            soma = soma + vet[i]
-        }
-    }
-    alert("a soma dos elementos pares "+soma)
+    let resultado = n-n2
+    document.getElementById("calc01").innerHTML = `a subtração do primeiro número pelo segundo é ${resultado}`
 
 }
 
+function calculaMult(){
+    let n = Number(document.getElementById("n1").value);
+    let n2 = Number(document.getElementById("n2").value);
+    let n3 = Number(document.getElementById("n3").value);
+
+    let resultado = n*n2*n3
+    document.getElementById("calc01").innerHTML = `a multiplicação dos números é ${resultado}`
+
+}
+function calculaDiv(){
+    let n = Number(document.getElementById("n1").value);
+    let n2 = Number(document.getElementById("n2").value);
+    if(n2 == 0){
+        document.getElementById("calc01").innerHTML = `divisão por 0 é impossível`
+    }else{
+        document.getElementById("calc01").innerHTML = `divisão do primeiro pelo segundo número é ${n/n2}`
+    }
+}
+function calculaPonderada(){
+    let n = Number(document.getElementById("n1").value);
+    let n2 = Number(document.getElementById("n2").value);
+    let resultado = ((n*2)+(n2*3))/(n+n2)
+    document.getElementById("calc01").innerHTML = `a media ponderada dos números é ${resultado},contando que o primeiro número tem peso 2 e o segundo peso 3`
+}
+
+function calcula10Desc(){
+    let n = Number(document.getElementById("valor").value);
+    document.getElementById("calc01").innerHTML = `o novo valor com 10% de desconto é ${n-(n*0.1)}`
+
+}
+function calculaComissao(){
+    let salario = Number(document.getElementById("n1").value);
+    let vendas = Number(document.getElementById("n2").value);
+    let total = salario+(vendas*0.04)
+    document.getElementById("calc01").innerHTML = `o salário total do funcionário é ${total}`
 
 
-//vetores
+}
+
+function calculaPeso(){
+    let peso = Number(document.getElementById("n1").value);
+    document.getElementById("calc01").innerHTML = `se a pessoa engordar 15% sobre o seu peso, o novo peso será ${peso+(peso*0.15)}`
+    document.getElementById("calc02").innerHTML = `se a pessoa engordar 20% sobre o seu peso, o novo peso será ${peso+(peso*0.2)}`
+
+}
+function calculaGrama(){
+    let kg = Number(document.getElementById("n1").value);
+    document.getElementById("calc01").innerHTML = `o peso em gramas é ${kg*1000}`
+
+}
+function calculaTrapezio(){
+    let AM = Number(document.getElementById("n1").value);
+    let Am = Number(document.getElementById("n2").value);
+    let A = Number(document.getElementById("n3").value);
+    let calc = ((AM+Am)*A)/2
+    document.getElementById("calc01").innerHTML = `área do trapézio = ${calc}`
+
+}
+function calculaQuadrado(){
+    let A = Number(document.getElementById("n1").value);
+    document.getElementById("calc01").innerHTML = `área do quadrado = ${A*A}`
+}
+function calculaLosango(){
+    let DM = Number(document.getElementById("n1").value);
+    let Dm = Number(document.getElementById("n2").value);
+    let calc = (DM*Dm)/2
+    document.getElementById("calc01").innerHTML = `área do losango = ${calc}`
+
+}
+function calculaMinimo(){
+    let Min = Number(document.getElementById("n1").value);
+    let Salario = Number(document.getElementById("n2").value);
+    let qnt = Salario/Min
+    document.getElementById("calc01").innerHTML = `o salário do funcionário contém ${qnt} de salários minimos`
+}
+
+function calculaTabuada(){
+    let num = Number(document.getElementById("n1").value);
+    for(let i = 0;i<11;i++){
+        document.write(num, " x "+i+" = " + (num*i) + "<br />");
+    }
+}
+function calculaIdade(){
+    let ano = Number(document.getElementById("n1").value);
+    let atual = Number(document.getElementById("n2").value);
+    let idade = atual-ano
+    document.getElementById("calc01").innerHTML = `a idade da pessoa em anos é ${idade}`
+    document.getElementById("calc02").innerHTML = `a idade da pessoa em meses é ${idade*12}`
+    document.getElementById("calc03").innerHTML = `a idade da pessoa em dias é ${idade*365}`
+    document.getElementById("calc04").innerHTML = `a idade da pessoa em semanas é ${idade*52}`
+}
+function calculaMulta(){
+    let salario = Number(document.getElementById("n1").value);
+    let conta1 = Number(document.getElementById("n2").value);
+    let conta2 = Number(document.getElementById("n3").value);
+    let valor = salario - (conta1+(conta1*0.02) + conta2+(conta2*0.02))
+    document.getElementById("calc01").innerHTML = `o valor do salário do João ficou ${valor}`
+}
+function calculaHipo(){
+    let cA = Number(document.getElementById("n1").value);
+    let cO = Number(document.getElementById("n2").value);
+    let hipo = (cA*cA)+(cO*cO)
+    document.getElementById("calc01").innerHTML = `a hipotenusa é ${Math.sqrt(hipo)}`
+}
+function calculaEsfera(){
+    let raio = Number(document.getElementById("n1").value);
+    let com = 2*3.14*raio
+    let area = 3.14*(raio*raio)
+    let vol = 3/4*3.14*(raio*raio*raio)
+    document.getElementById("calc01").innerHTML = `comprimento da esfera ${com}`
+    document.getElementById("calc02").innerHTML = `area da esfera ${area}`
+    document.getElementById("calc03").innerHTML = `vol da esfera ${vol}`
+}
+
+function conversaoFahrenheit(){
+    let C = Number(document.getElementById("n1").value);
+    let calc = (180*(C+32))/100
+    document.getElementById("calc01").innerHTML = `a temperatura digitada em Celsius é  ${calc} em Fahrenheit`
+}
+function calcularPotencia(){
+    let m1 = Number(document.getElementById("n1").value);
+    let m2 = Number(document.getElementById("n2").value);
+    let m22= m1*m2
+    document.getElementById("calc01").innerHTML = `a dimensão da área possui ${m22} metros quadrados e precisa de ${m22*18}W de potência de energia.`
+}
+function calculaEscada(){
+    let ang = Number(document.getElementById("n1").value);
+    let dist = Number(document.getElementById("n2").value);
+    let hip = dist/Math.cos(ang)
+    document.getElementById("calc01").innerHTML = `a medida da escada é ${hip} metros`
+
+}
+function calculaSalarioRegras(){
+    let NumHR = Number(document.getElementById("n1").value);
+    let SM = Number(document.getElementById("n2").value);
+    let NumHREx = Number(document.getElementById("n3").value);
+    let HT = (SM*(1/8))
+    let HE = (SM*(1/4))
+    let salarioBruto = NumHR*HT
+    let salarioExtra = NumHREx*HE
+    let salario = salarioBruto+salarioExtra
+    document.getElementById("calc01").innerHTML = `o salário a receber é ${salario} `
+}
+function calculaDiagonais(){
+    let NumLados = Number(document.getElementById("n1").value);
+    let NumDia = (NumLados*(NumLados-3))/2
+    document.getElementById("calc01").innerHTML = `o número de diagonais do polígono é ${NumDia} `
+}
+function calculaAngulo(){
+    let ang1 = Number(document.getElementById("n1").value);
+    let ang2 = Number(document.getElementById("n2").value);
+    if (ang1+ang2<180){
+        document.getElementById("calc01").innerHTML = `o terceiro angulo é ${180-(ang1+ang2)} `
+    }else{
+        document.getElementById("calc01").innerHTML = `Não é um triangulo`
+    }
+}
+function calculaMoeda(){
+    let real = Number(document.getElementById("n1").value);
+    document.getElementById("calc01").innerHTML = `O valor em R$${real} é $${real*1.80} dolares, $${real*2} marco alemão e $${real*3.57} libra esterlina `
+}
+function calculaHorasMinutos(){
+    let hr = Number(document.getElementById("n1").value);
+    let min = Number(document.getElementById("n2").value);
+    document.getElementById("calc01").innerHTML = `${hr} horas são $${hr*60} minutos`
+    document.getElementById("calc02").innerHTML = `o total de minutos = ${hr*60+min}`
+    document.getElementById("calc03").innerHTML = `o total de segundos = ${(hr*60+min)*60} `
+}
+
+//lista03-vetores
 
 function calculaParesEImpares(){
     let vetor = []
@@ -665,6 +744,7 @@ function calculaParesEImpares(){
     document.getElementById("calc01").innerHTML = `Pares ${pares} | qnt: ${pares.length}`
     document.getElementById("calc02").innerHTML =`Impares ${impares} | qnt: ${impares.length}`
 }
+
 function calculaMultiplos(){
     let vetor = []
     for(let i=0;i<7;i++){
@@ -690,7 +770,9 @@ function calculaMultiplos(){
     document.getElementById("calc03").innerHTML =`Multiplo de 3 e 2 = ${IMPpar} | qnt: ${impares.length}`
     document.getElementById("calc04").innerHTML =`Sem multiplos = ${sem} | qnt: ${sem.length}`
 }
-function ex03(){
+
+
+function calculaEstoque(){
     let codigos = []
     let estoque = []
    
@@ -699,84 +781,60 @@ function ex03(){
         estoque[i] = Number(prompt(`Informe a quantidade do produto`))
     }
 
-    let cliente = Number(prompt("Informe o código do cliente"))
+    let cliente = Number(prompt("Informe o código do cliente. Digite 0 para finalizar"))
     while(cliente != 0){
+    cliente = Number(prompt("Informe o código do cliente. Digite 0 para finalizar"))
     let codigo = Number(prompt("Informe o código do produto para compra"))
-    let qnt = Number(prompt("Informe a qnt para compra"))
+    let qnt = Number(prompt("Informe a quantidade para compra"))
     let achou = false
-    for(let i=0;i<5;i++){
+    for(let i=0;i<10;i++){
         if(codigo === codigos[i]){
             achou = true 
             if(estoque[i]>= qnt){
             estoque[i] = estoque[i]-qnt
+            alert("Pedido Atendido. Obrigada e Volte Sempre!")
+            document.getElementById("calc01").innerHTML =(`Estoque atualizado ${estoque}, Pedido Atendido. Obrigada e Volte Sempre!`)
             }
             else{
-                    alert("Falta do produto")
+                    alert("Não temos estoque o suficiente dessa mercadoria")
         }
     }
     }
     if(!achou){
-        alert("Produto n encontrado")
+        alert("Produto não encontrado")
     }
 }
     console.log(`Estoque atualizado ${estoque}`)
 }
-function calculaEstoque(){
-    let codigos = []
-    let estoque = []
-   
-    for(let i=0;i<2;i++){
-        codigos[i] = Number(prompt(`Informe o código`))
-        estoque[i] = Number(prompt(`Informe a quantidade do produto`))
-    }
 
-    let cliente = Number(prompt("Informe o código do cliente"))
-    while(cliente != 0){
-    let codigo = Number(prompt("Informe o código do produto para compra"))
-    let qnt = Number(prompt("Informe a qnt para compra"))
-    let achou = false
-    
-        if(codigos.includes(codigo)){
-                achou = true 
-                if(estoque[i]>= qnt){
-                estoque[i] = estoque[i]-qnt
-                }
-                else{
-                    alert("Falta do produto")
-            }
-        }
-    }
-    if(!achou){
-        alert("Produto n encontrado")
-}
-document.getElementById("calc01").innerHTML =(`Estoque atualizado ${estoque}`)
-}
-function ex04(){
+
+function calcula30(){
     let vet = []
     let cont = 0
-    for(let i=0;i<3;i++){
-        vet[i] = Number(prompt(`Informe ${i+1} numero`))
+    for(let i=0;i<15;i++){
+        vet[i] = Number(prompt(`Informe ${i+1} numero de um vetor de tamanho 15`))
     }
-    for(let i=0;i<3;i++){
+    for(let i=0;i<15;i++){
         if(vet[i] == 30){
             cont++
-            console.log(`O número 30 foi digitado na posição ${i}`)
+            alert(`O número 30 foi digitado na posição ${i}`)
         }
     }
-    if(cont===0){
-        console.log(`O número 30 não foi digitado `)
+    if(cont==0){
+        alert(`O número 30 não foi digitado `)
+    }else{
+        alert(`o número 30 foi digitado ${cont} vezes`)
     }
     
 }
-function ex05(){
+function calculaLogicaLinguagem(){
     let ling = []
     let log = []
     let igual = []
-    let cont = 0
-    for(let i=0;i<3;i++){
+    for(let i=0;i<15;i++){
         ling[i] = Number(prompt(`Informe a ${i+1} matricula do aluno que cursa Linguagem de Programação`))
     }
-    for(let i=0;i<2;i++){
+    for(let i=0;i<10;i++){
         log[i] = Number(prompt(`Informe a ${i+1} matricula do aluno que cursa Lógica de Programação`))
     }
     for(let i=0;i<3;i++){
@@ -786,25 +844,41 @@ function ex05(){
             }
         }
     }
-    console.log(`Os alunos matriculados em ambas possuem os respectivos códigos: ${igual}`)
+    alert(`Os alunos matriculados em ambas possuem os respectivos códigos: ${igual}`)
     
 }
-function ex06(){
-    let nomes = [],totalVendas = [],percentual = [],receber=[],total=0
-    for(let i=0;i<2;i++){
+function calculaComissaoVendedores(){
+    let nomes = [],totalVendas = [],percentual = [],receber=[],total=0, maior=0
+    for(let i=0;i<10;i++){
         nomes[i] = prompt(`Digite o nome do ${i+1}º vendedor: `);
         totalVendas[i] = Number(prompt(`Digite o total de vendas do ${i+1}º vendedor: `));
         percentual[i] = Number(prompt(`Digite o percentual do vendedor do ${i+1}º vendedor: `));
         receber[i] = totalVendas[i] * percentual[i] / 100;
-        console.log(`Nome do vendedor ${nomes[i]} e sua comissão ${receber[i]}`)
+        alert(`Nome do vendedor ${nomes[i]} e sua comissão ${percentual[i]}%`)
         total = total + totalVendas[i]
     }
-    console.log(`Total de venda de todos os vendedores${total}`)
+    alert(`Total de venda de todos os vendedores ${total}`)
+    let menor = receber[1]
+    let nomeMaior 
+    let nomeMenor
+    for(let i =0;i<10;i++){
+        if(receber[i]>maior){
+            maior=receber[i]
+            nomeMaior = nomes[i]
+        }
+        if(receber[i]<menor){
+            menor = receber[i]
+            nomeMenor  = nomes[i]
+        }
+        document.getElementById("calc01").innerHTML =`o vendedor ${nomeMaior} é o que receberá o maior valor sendo ele de ${maior} reais`
+        document.getElementById("calc02").innerHTML =`o vendedor ${nomeMenor} é o que receberá o menor valor sendo ele de ${menor} reais`
+    }
+    
     
 
 }
 
-function ex07(){
+function calculaNegPos(){
     let num = [], qtdeNegativos = 0, somaPositivos = 0;
 
       for(let i = 0; i < 10; i++) {
@@ -816,37 +890,31 @@ function ex07(){
             somaPositivos += num[i];
         }
       }
-
-      alert(`Quantidade de números negativos: ${qtdeNegativos}\nSoma dos números positivos: ${somaPositivos}`);
-    
+      document.getElementById("calc01").innerHTML =`Quantidade de números negativos: ${qtdeNegativos} \n Soma dos números positivos: ${somaPositivos}`    
 
 }
-function ex08(){
-    let nomes = [], medias = [], maiorMedia = 0, MenorMedia = 999;
+function calculaMediaFinal(){
+    let nomes = [], medias = [], maiorMedia = 0,nomeMaior=0
 
     for(let i = 0; i < 7; i++) {
       nomes[i] = prompt(`Digite o nome do ${i+1}º aluno: `);
-      medias[i] = Number(prompt(`Digite a média do ${i+1}º aluno: `));
-
-      if(MenorMedia > medias[i]) {
-          MenorMedia = medias[i]
-      }
+      medias[i] = Number(prompt(`Digite a média final do ${i+1}º aluno: `));
       if(maiorMedia < medias[i]){
          maiorMedia = medias[i]
+         nomeMaior=nomes[i]
       }
     }
-
-    alert(`maior média: ${maiorMedia} do aluno ${medias[i]}`);
+    document.getElementById("calc01").innerHTML = `maior média: ${maiorMedia} do aluno ${nomeMaior}`;
 }
-function ex09(){
+function calculaRelatorio(){
     let nomeProdutos = [], codProdutos = [], precoProdutos = [], novoPrecoProdutos = []
-    for(let i = 0; i < 3; i++) {
+    for(let i = 0; i < 10; i++) {
       nomeProdutos[i] = prompt(`Digite o nome do ${i+1}º produto: `);
-      console.log(`O ${i+1}º produto se chama: ${nomeProdutos[i]}`)
+      alert(`O ${i+1}º produto se chama: ${nomeProdutos[i]}`)
       codProdutos[i] = Number(prompt(`Digite o código do ${i+1}º produto: `));
-      console.log(`O ${i+1}º código é: ${codProdutos[i]}`)
+      alert(`O ${i+1}º código é: ${codProdutos[i]}`)
       precoProdutos[i] = Number(prompt(`Digite o preço do ${i+1}º produto: `));
-      console.log(`O ${i+1}º preço é: ${precoProdutos[i]}`)
+      alert(`O ${i+1}º preço é: ${precoProdutos[i]}`)
         if(precoProdutos[i] > 1000) {
             if(codProdutos[i] % 2 === 0) {
                     novoPrecoProdutos[i] = precoProdutos[i] * 1.2;
@@ -858,12 +926,724 @@ function ex09(){
             }
         }
 
-    for(let i = 0; i < 3; i++) {
-        console.log(`Produto: ${nomeProdutos[i]} | Cód: ${codProdutos[i]} | Preço: R$${precoProdutos[i]} | Novo preço: R$${novoPrecoProdutos[i]}<br />`)
+    for(let i = 0; i < 10; i++) {
+        alert(`Produto: ${nomeProdutos[i]} | Cód: ${codProdutos[i]} | Preço: R$${precoProdutos[i]} | Novo preço: R$${novoPrecoProdutos[i]}`)
     }
     
 }
-function ex10(){
-    
+function calculaVetResultantes(){
+    let vet10= []
+    let vet5 =[]
+    let somaPares =0, somaVetor5=0,qnt=0
+    for(let i=0;i<10;i++){
+        vet10[i] = Number(prompt(`Digite o ${i+1} número do vetor de 10`))
+    }
+    for(let i=0;i<5;i++){
+        vet5[i] = Number(prompt(`Digite o ${i+1} número do vetor de 5`))
+        somaVetor5 = somaVetor5+ vet5[i]
+    }
+    for(let i=0;i<10;i++){
+       if(vet10[i]%2==0){
+            somaPares = somaPares + vet10[i]
+       }
+    }
+    for(let i=0;i<10;i++){
+        if(vet10[i]%2==1){
+            for(let i=0;i<5;i++){
+                if(vet10[i]%vet5[i]==0){
+                    qnt++
+                }
+            }
+        }
+     }
+    document.getElementById("calc01").innerHTML =`Soma de todos os elementos pares do primeiro vetor junto com todos os elemntos do segundo vetor ${somaVetor5+somaPares} `    
+    document.getElementById("calc02").innerHTML =`Quantidade de elementos do primeiro vetor que são ímpares e multiplos dos elementos do segundo vetor é ${qnt}`    
+
+}
+function calculaPI(){
+    let num = []
+    let par=[]
+    let imp=[]
+    for(let i=0;i<10;i++){
+        num[i] = Number(prompt(`Digite o ${i+1} número do vetor de 10`))
+    }
+    for(let i=0;i<10;i++){
+        if(num[i]%2==0){
+            par.push(num[i])
+        }else{
+            imp.push(num[i])
+        }
+    }
+    document.getElementById("calc01").innerHTML =`os pares ${par} `    
+    document.getElementById("calc02").innerHTML =`os ímpares ${imp}`     
+}
+function calculaSaida(){
+    let num = []
+    let soma = 0
+    for(let i=0;i<5;i++){
+        num[i] = Number(prompt(`Digite o ${i+1} número do vetor de 10`))
+        soma = soma+num[i]
+    }
+    document.getElementById("calc01").innerHTML =`os números digitados foram ${num[0]} + ${num[1]}+${num[2]}+${num[3]}+${num[4]} = ${soma} ` 
+}
+function calculaNotas(){
+    let nome = [], notas = []
+    let media = 0
+    for(let i = 0; i < 8; i++) {
+      nome[i] = prompt(`Digite o nome do ${i+1}º aluno: `);
+      alert(`O ${i+1}º aluno se chama: ${nome[i]}`)
+      notas[i] = Number(prompt(`Digite a nota do ${i+1}º aluno: `));
+      alert(`O ${i+1}º nota é: ${notas[i]}`)
+      media = media+notas[i]
+    }
+    alert(`Relatório de Notas`)
+    for(let i = 0; i < 8; i++) {
+        alert(`${nome[i]} ${notas[i]} \n`)
+      }
+    alert(`Média da Classe ${media/8}`)
 }
 
+function calculaNotasRelatorios(){
+    let nome = []
+    let media = []
+    let matriz = []
+    let soma = 0
+    let qntA=0
+    let qntR =0
+    for(let i = 0; i < 6; i++) {
+        nome.push(prompt(`Digite o nome do ${i+1}º aluno: `))
+        matriz[i]= []
+        for(let j = 0;j<2;j++){
+            matriz[i][j]=Number(prompt(`Digite a ${j+1} nota do ${i+1}º aluno: `));
+            soma = soma + matriz[i][j]
+            if((matriz[i][0]+matriz[i][1])>5){
+                media[i]="Aprovado"
+                qntA++
+            }else{
+                media[i]= "Reprovado"
+                qntR++
+            }
+        }
+        
+    }
+    for(let i = 0; i < 6; i++){
+        for(let j = 0;j<2;j++){
+            alert(`${nome[i]}| ${matriz[i][0]}| ${matriz[i][1]}| média = ${(matriz[i][0]+matriz[i][1])/2}| ${media[i]}`)
+        }
+    }
+    document.getElementById("calc01").innerHTML =`Média da Turma ${soma/6}` 
+    document.getElementById("calc02").innerHTML =`percentual dos alunos aprovados ${(100*qntA)/6}% ` 
+    document.getElementById("calc03").innerHTML =`percentual dos alunos reprovados ${(100*qntR)/6}% ` 
+}
+function calculaDVD(){
+    let nome = []
+    let dvd = []
+    for(let i = 0; i < 8; i++) {
+        nome.push(prompt(`Digite o nome do ${i+1}º cliente: `))
+        dvd.push(Number(prompt(`Digite a quantidade de DVDs locados do ${i+1}º cliente: `)))
+    }
+    for(let i=0;i<8;i++){
+        if(dvd[i]>10){
+            let qnt = dvd[i]/10
+            alert(`o cliente ${nome[i]} possui ${qnt} locações grátis`)
+        }else{
+            alert(`o cliente ${nome[i]} não possui locações grátis`)
+        }
+        
+    }
+}
+function calcula5Produtos(){
+    let preco = []
+    let nome = []
+    let qnt=0
+    let qnt2=0
+    let soma = 0
+    let nomes = []
+    for(let i = 0; i < 5; i++) {
+        nome.push(prompt(`Digite o nome do ${i+1}º produto: `))
+        preco.push(Number(prompt(`Digite o preço do ${i+1}º produto: `)))
+        if(preco<50){
+            qnt++
+        }
+        if(preco>=50 && preco<100){
+            nomes.push(nome[i])
+        }
+        if(preco>100){
+            soma = soma+preco[i]
+            qnt2++
+        }
+    }
+    document.getElementById("calc01").innerHTML =`Quantidade de Produtos com preço inferiores a R$50,00 ${qnt}` 
+    document.getElementById("calc02").innerHTML =`Nome dos produtos que possuem preço entre R$50,00 a R$100,00 - ${nomes}% ` 
+    document.getElementById("calc03").innerHTML =`Media de preços dos produtos que possuem valores maiores que R$100,00 ${soma/qnt2}% ` 
+}
+
+function calculaOrdenados(){
+    let vet1 = []
+    let vet2 = []
+    for(let i = 0; i < 10; i++) {
+        vet1.push(prompt(`Digite o ${i+1}º elemento do primeiro vetor: `))
+    }
+    for(let i = 0; i < 10; i++) {
+        vet2.push(prompt(`Digite o ${i+1}º elemento do segundo vetor: `))
+    }
+    const vet3 = vet1.concat(vet2)
+    document.getElementById("calc01").innerHTML =`Elementos descrescentes dos vetores: ${vet3.sort()}` 
+
+
+}
+function calculaMaiorMenorPosicao(){
+    let numero = []
+    let maior =0
+    for(let i = 0; i < 15; i++) {
+        numero.push(prompt(`Digite o ${i+1}º número de 15: `))
+    }
+    for(let i = 0; i < 15; i++) {
+       if(numero[i]> maior){
+        document.getElementById("calc01").innerHTML =`o maior número do vetor é ${numero[i]} e ocupa a posição ${i}` 
+       }
+    }
+    let menor = vetor[i]
+    for(let i = 0; i < 15; i++) {
+        if(numero[i]< menor){
+         document.getElementById("calc02").innerHTML =`o menor número do vetor é ${numero[i]} e ocupa a posição ${i}` 
+        }
+     }
+}
+function calculaIndicesIguais(){
+    let vet1 = []
+    let vet2 = []
+    let vet3=[]
+    for(let i = 0; i < 10; i++) {
+        vet1.push(prompt(`Digite o ${i+1}º elemento do primeiro vetor: `))
+    }
+    for(let i = 0; i < 10; i++) {
+        vet2.push(prompt(`Digite o ${i+1}º elemento do segundo vetor: `))
+    }
+    for(let i = 0; i < 10; i++) {
+        vet3.push(vet1[i]*vet2[i])
+    }
+    document.getElementById("calc01").innerHTML =`os elementos dos dois vetores que possuem indices iguais mulltiplicados um pelo outro são ${vet3}` 
+}
+function calculaPositivos(){
+    let vet1 = []
+    let vet3 = []
+    for(let i = 0; i < 10; i++) {
+        vet1.push(prompt(`Digite o ${i+1}º elemento do primeiro vetor: `))
+    }for(let i = 0; i < 10; i++) {
+        if(vet1[i]>0){
+            vet3.push(vet1[i])
+        }
+    }
+    document.getElementById("calc01").innerHTML =`os elementos positivos do vetor são ${vet3}` 
+}
+function calculaNulosPor1(){
+    let vet1 = []
+    let vet3 = []
+    for(let i = 0; i < 10; i++) {
+        vet1.push(prompt(`Digite o ${i+1}º elemento do primeiro vetor: `))
+    }for(let i = 0; i < 10; i++) {
+        vet3.push(vet1[i])
+    }
+    for(let i = 0; i < 10; i++) {
+        if(vet3[i]<0){
+            vet3[i] = 1
+        }
+    }
+    document.getElementById("calc01").innerHTML =`os elementos do vetor digitados são ${vet1}` 
+    document.getElementById("calc02").innerHTML =`os nulos foram substituídos por 1 -  ${vet3}` 
+
+}
+function calculaCompactar(){
+    let vetA = []
+    let vetB = []
+    for(let i = 0; i < 10; i++) {
+        vetA.push(prompt(`Digite o ${i+1}º elemento do primeiro vetor: `))
+    }
+    for(let i = 0; i < 10; i++) {
+        if(vetA[i]>0){
+            vetB.push(vetA[i])
+        }
+    }
+    document.getElementById("calc01").innerHTML =`os elementos do vetor A foram retirados caso fossem nulos ou negativos, então foram armazanados no vetor B - ${vetB}` 
+
+
+}
+function calculaBrincando(){
+    let vetA = []
+    let vetB = []
+    let sub = 0
+    for(let i = 0; i < 5; i++) {
+        vetA.push(prompt(`Digite o ${i+1}º elemento do vetor A: `))
+    }for(let i = 0; i < 5; i++) {
+        vetB.push(prompt(`Digite o ${i+1}º elemento do vetor B: `))
+    }
+    for(let i = 0; i < 5; i++) {
+        sub = sub - (vetA[i] - vetB[1-i])
+    }
+    document.getElementById("calc01").innerHTML =`a subtração dos elementos diante da regra, subtrair o primeiro elemento do vetor A do último elemento do vetor B, e consequentemente é ${sub}` 
+
+
+}
+//arrumar
+function calculaPrimoVetor(){
+    let vet = []
+    let vetPrimo = []
+    let sub = 0
+    for(let i = 0; i < 5; i++) {
+        vet.push(prompt(`Digite o ${i+1}º elemento do vetor de 15: `))
+    }
+    for(let i = 0; i < 5; i++) {
+        
+    }
+}
+//arrumar
+function calculaDivMaior(){
+    let vet = []
+    let maior = 0
+    let soma = 0
+    let calc
+    for(let i = 0; i < 5; i++) {
+        vet.push(prompt(`Digite o ${i+1}º elemento do vetor de 15: `))
+        soma = soma + vet[i]
+    }
+    for(let i = 0; i < 5; i++) {
+        if(vet[i]>maior){
+            maior = vet[i]
+        }
+    }
+    calc = soma/maior
+    document.getElementById("calc01").innerHTML =`a divisão de todos os elementos divididos pelo elemento maior do vetor é ${calc}` 
+
+}
+//lista04
+function Qnt15a20(){
+    let qnt = 0
+    let matriz = []
+    for(let i = 0;i<3;i++){
+        matriz[i] = [] //cria um vetor vazio
+        for(let j = 0;j<5;j++){
+            matriz[i][j] = Number(prompt(`Digite o elemento da ${i+1} linha e o elemento da ${j+1} coluna`))
+        }
+    }
+    for(let i = 0;i<2;i++){
+        for(let j = 0;j<2;j++){
+            if(matriz[i][j]>15 && matriz[i][j]<20){
+                qnt++
+            }
+        }
+    }
+    document.getElementById("calc01").innerHTML =`a quantidade de elementos dentro da matriz que estão entre 15 a 20 são ${qnt}`
+}
+
+function calculaMediaPares(){
+    let qnt = 0
+    let qnt2=0
+    let matriz = []
+    let soma = 0
+    for(let i = 0;i<2;i++){
+        matriz[i] = [] //cria um vetor vazio
+        for(let j = 0;j<4;j++){
+            matriz[i][j] = Number(prompt(`Digite o elemento da ${i+1} linha e o elemento da ${j+1} coluna`))
+        }
+    }
+    for(let i = 0;i<2;i++){
+        for(let j = 0;j<4;j++){
+            if(matriz[i][j]>12 && matriz[i][j]<20){
+                qnt++
+            }
+        }
+        alert(`a quantidade de elementos entre 12 a 20 da linha ${i+1} é ${qnt}`)
+    }
+    for(let i = 0;i<2;i++){
+        for(let j = 0;j<4;j++){
+            if(matriz[i][j]%2==0){
+              soma = soma+matriz[i][j]
+              qnt2++
+            }
+        }
+    }
+    alert(`a média dos elementos pares da matriz é ${soma/qnt2}`)
+}
+
+function calculaMm(){
+    let matriz = []
+    let maior = 0
+    let k,l
+    let a,b
+    let menor
+    for(let i = 0;i<6;i++){
+        matriz[i] = [] //cria um vetor vazio
+        for(let j = 0;j<3;j++){
+            matriz[i][j] = Number(prompt(`Digite o elemento da ${i+1} linha e o elemento da ${j+1} coluna`))
+        }
+    }
+    for(let i = 0;i<6;i++){
+        for(let j = 0;j<3;j++){
+            if(matriz[i][j]>maior){
+                maior = matriz[i][j]
+                k=i
+                l=j
+            }
+        }
+    }
+    for(let i = 0;i<6;i++){
+        for(let j = 0;j<3;j++){
+            menor = matriz[0][0]
+            if(matriz[i][j]<menor){
+                menor = matriz[i][j]
+                a=i
+                b=j
+            }
+        }
+    }
+    alert(`o maior elemento da matriz é ${maior} e está localizado na linha ${k+1} e na coluna ${l+1}`)
+    alert(`o menor elemento da matriz é ${menor} e está localizado na linha ${a+1} e na coluna ${b+1}`)
+
+}
+function calcula15alunos(){
+    let matriz = []
+    let soma = 0
+    let sit = []
+    let nome = []
+    let media
+    let somaN = 0
+    for(let i = 0;i<15;i++){
+        matriz[i] = [] //cria um vetor vazio
+        for(let j = 0;j<5;j++){
+            matriz[i][j] = Number(prompt(`Digite a ${j+1} nota do ${i+1} aluno`))
+        }
+    }
+    for(let i = 0;i<15;i++){
+        nome[i]= prompt(`Digite o nome do ${i+1} aluno`)
+    }
+    for(let i = 0;i<15;i++){
+        soma = 0
+        for(let j = 0;j<5;j++){
+            soma = soma + matriz[i][j]
+            media = soma/5
+            if(media>5){
+                sit[i] = "Aprovado"
+            }else{
+                sit[i] = "Reprovado"
+            }
+            somaN = somaN+soma
+        }
+        alert(`o aluno ${nome[i]} possui média das provas de ${media} e a situação é ${sit[i]}`)
+    }
+    alert(`a média da turma é ${somaN/15}`)
+}
+
+function calculaLoja(){
+    let matriz = []
+    let soma = 0
+    let somaA=0
+    let nomeMes = ["JANEIRO", "FEVEREIRO", "MARÇO", "ABRIL", "MAIO", "JUNHO", "JULHO", "AGOSTO", "SETEMBRO", "OUTUBRO", "NOVEMBRO", "DEZEMBRO"]
+    for(let i = 0;i<12;i++){
+        matriz[i] = [] //cria um vetor vazio
+        for(let j = 0;j<4;j++){
+            matriz[i][j] = Number(prompt(`Digite o que foi vendido na ${j+1} semana do ${i+1} mês`))
+        }
+    }
+    for(let i = 0;i<12;i++){
+        soma = 0
+        for(let j = 0;j<4;j++){
+           soma = soma +matriz[i][j]
+        }
+        alert(`o total de vendas no mês de ${nomeMes[i]} foi de ${soma}`)
+    }
+    for(let i = 0;i<12;i++){
+        for(let j = 0;j<4;j++){
+            alert(`o total de vendas na ${j+1} semana do ${i+1} mês foi de ${matriz[i][j]}`)
+        }
+    }
+    for(let i = 0;i<12;i++){
+        for(let j = 0;j<4;j++){
+           somaA = somaA +matriz[i][j]
+        }
+    }
+    alert(`o total de vendas no ano foi de ${somaA} `)
+
+}
+
+//lista05
+function entradaDadosBike(bikes, marcas){
+    // entrada de dados
+   let bike = {
+            marca: prompt(`Informe marca da bike`).toUpperCase(),
+            modelo: prompt(`Informe modelo da bike`),
+            aro: Number(prompt(`Informe aro da bike`)),
+            quadro: Number(prompt(`Informe quadro da bike`)),
+            ano: Number(prompt(`Informe ano da bike`)),
+            preco: Number(prompt(`Informe preco da bike`))
+        }
+        while (!marcas.includes(bike.marca)){
+            bike.marca = prompt(`Informe nova marca da bike`).toUpperCase()
+        }
+        bikes.push(bike)
+        alert('Bike cadastrada com sucesso')
+}
+function calcularMediaPrecos(bikes){
+    let soma = 0
+    for(let i=0;i<bikes.length;i++){
+        soma = soma + bikes[i].preco
+    }
+    if (bikes.length == 0){
+        console.log(`Não há bikes cadastradas`)
+    }
+    else {
+        console.log(`Média de preço das bikes: ${soma/bikes.length}`)
+    }
+}
+
+function calculaBikeMaisAntiga(bikes){
+    // bikes mais antigas, considerando empate
+    if (bikes.length == 0){
+        return (`Não há bikes cadastradas`)
+    }
+    let maisAntiga = [] 
+    maisAntiga.push(bikes[0])
+    for(let i=1;i<bikes.length;i++){
+       if (bikes[i].ano < maisAntiga[0].ano){
+           maisAntiga = [] // zera o vetor
+           maisAntiga.push(bikes[i])
+       }
+       else if (bikes[i].ano == maisAntiga[0].ano){
+                maisAntiga.push(bikes[i])
+            }
+    }
+    return maisAntiga
+}
+
+function calculaBikesCaloi(bikes){
+    // bikes da marca CALOI
+    if (bikes.length == 0){
+        console.log(`Não há bikes cadastradas`)
+    }
+    else {
+        let caloi = []
+        for(let i=0;i<bikes.length;i++){
+            if (bikes[i].marca == "CALOI"){
+                caloi.push(bikes[i])
+            }
+        }
+        console.log(caloi)
+    }
+}
+
+function calculaQtde29(bikes){
+    // quantas bikes possuem aro 29
+    if (bikes.length == 0){
+        return (`Não há bikes cadastradas`)
+    }
+    let aro29 = 0
+    for(let i=0;i<bikes.length;i++){
+        if (bikes[i].aro == 29){
+            aro29++
+        }
+    }
+    return (`Quantidade de bikes com aro 29: ${aro29}`)
+}
+function calculaBikeMaiorQuadro(bikes){
+     //  bike com maior quadro, pode-se desconsiderar empates
+    if  (bikes.length == 0){
+        console.log(`Não há bikes cadastradas`)
+    }
+    else {
+        let maiorQuadro = bikes[0]
+        for(let i=1;i<bikes.length;i++){
+            if (bikes[i].quadro > maiorQuadro.quadro){
+                maiorQuadro = bikes[i]
+            }
+        }
+        console.log(maiorQuadro)
+    }
+}
+function principal(){
+    let bikes = []
+    let marcas = ["CALOI", "SCOTT", "CANNONDALE"]
+    let opcao // opção escolhida pelo usuário
+    do {
+        opcao = Number(prompt("Digite \n 1. Cadastra uma bike \n 2. Calcula média de preços \n 3. Calcula bikes mais antigas \n 4. Calcula bikes da marca CALOI \n 5. Calcula quantidade de bikes com aro 29 \n 6. Calcula bike com maior quadro \n 7. Finaliza"))
+        switch(opcao){
+            case 1: entradaDados(bikes, marcas) 
+                    break
+            case 2: calcularMediaPrecos(bikes)
+                    break
+            case 3: console.log(calculaBikeMaisAntiga(bikes))
+                    break
+            case 4: calculaBikesCaloi(bikes)
+                    break
+            case 5: console.log(calculaQtde29(bikes))
+                    break
+            case 6: calculaBikeMaiorQuadro(bikes)
+                    break
+            case 7: alert('Programa será finalizado')
+                    break
+            default: alert(`Opção inválida`) 
+        }
+    }
+    while (opcao != 7)
+}
+
+
+
+let principalFarm = () =>{
+    let vetFarmacias = []
+    let vetRemedios = []
+    let opcao 
+    do{
+        opcao = Number(prompt(`Digite a opção: \n 
+        1 - Cadastrar uma farmácia\n
+        2- Cadastrar um remédio\n
+        3- Fazer uma compra de um remédio\n
+        4- Sair`))
+        switch(opcao){
+            case 1: cadastraFarmacias(vetFarmacias)
+                    break
+            case 2: cadastraRemedios(vetRemedios, vetFarmacias)
+                    break
+            case 3: vendeRemedios(vetRemedios)
+                    break
+            case 4: alert(`O programa será finalizado`)
+                    break
+            default:alert(`Opção inválida`)
+        }
+    }
+    while(opcao!=4)
+}
+
+let cadastraFarmacias = (vetFarmacias) =>{
+        let objFarmacia = {
+            codigo: Number(prompt(`Digite o código da  farmácia `)),
+            nome: prompt(`Digite o nome da  farmácia `),
+            endereco: prompt(`Digite o endereço da  farmácia `)
+        }
+        while(vetFarmacias.some((farm) => farm.codigo == objFarmacia.codigo)){
+            alert(`código existente`)
+            objFarmacia.codigo = Number(prompt(`Informe novo código da farmácia`))
+        }
+        vetFarmacias.push(objFarmacia)
+        alert('farmacia cadastrada com sucesso')
+}
+let cadastraRemedios = (vetRemedios, vetFarmacias) => {
+    if(vetFarmacias.length === 0){
+        alert(`Não há farmácias cadastradas`)
+    }else{
+        let objRemedio = {
+            codigoFarm: Number(prompt(`Digite o código da  farmácia `)),
+            nome: prompt(`Digite o nome do  remédio `),
+            qnt: Number(prompt(`Digite a quantidade de estoque do  remédio `)),
+            preco: Number(prompt(`Digite o preço do  remédio `))
+        } 
+        while(!vetFarmacias.some( (percorre) => percorre.codigo === objRemedio.codigoFarm)){
+            alert(`Farmácia inexistente`)
+            objRemedio.codigoFarm = Number(prompt(`Informe novo código da farmácia`))
+        }
+    
+        vetRemedios.push(objRemedio)
+        alert('remedio cadastrado com sucesso')
+    }
+   
+
+}
+let vendeRemedios = (vetRemedios) => {
+    if(vetRemedios === 0){
+        alert(`Não há remédios cadastrados`)
+    }else{
+            let codFarmacia = Number(prompt(`informe o código da farmacia do remedio`))
+            let nomeRemedio = prompt(`informe o nome do remedio`)
+            let qntVendida = Number(prompt(`informe a quantidade de remédios para a compra`))
+            let achou = false//assume que n encontrou
+            // vamos procurar o remedio na lisra
+            for(let i = 0;i<vetRemedios.length;i++){
+                if(vetRemedios[i].codigoFarm == codFarmacia && vetRemedios[i].nome == nomeRemedio){
+                    achou = true
+                    if(vetRemedios[i].qnt> qntVendida){
+                        vetRemedios[i].qnt = vetRemedios[i].qnt - qntVendida
+                        alert(`Venda efetuada com sucesso`)
+                    }
+                    else {
+                        alert('Estoque insuficiente')
+                    }
+                }
+            }
+            //nesse caso o achou n entrou no for, por isso pergunta se ele é false e assim declarar que n achou remedio 
+            if (!achou){
+                alert(`Remédio/farmácia não existe ou vc está digitando o código errado da farmácia que o remédio está incluso`)
+            }
+            alert(`Compra efetuada`)
+        }
+}
+
+let cadastraPP = (vetorPP) => {
+    // solicita dados ao usuário e guarda em um objeto
+    let objPP = {
+        codigo: Number(prompt(`Informe o código do partido`)),
+        nome: prompt(`Informe o nome do partido`),
+        sigla: prompt(`Informe a sigla do partido`),
+        presidente: prompt(`Informe o nome do presidente do partido`),
+        nroCand: Number(prompt(`Informe o número de candidatos do partido`))   
+    }
+    // verifica se o código já existe
+    while (vetorPP.some( (pp) => pp.codigo == objPP.codigo)) {
+        alert(`Código já existente`)
+        objPP.codigo = Number(prompt(`Informe um novo código do partido`))
+    }
+    // adiciona o objeto no vetor
+    vetorPP.push(objPP)
+    alert('Partido adicionado')
+}
+let cadastraPolitico = (vetorPolitico, vetorPP) => {
+    let objPolitico = {
+        codPartido:  Number(prompt(`Informe o código do partido`)),
+        nome: prompt(`Informe o nome do político`),
+        qtde: 0,
+        cargo: prompt(`Informe o cargo do político`)
+    }
+    // verifica se o código do partido existe
+    while (!vetorPP.some( (partido) => partido.codigo == objPolitico.codPartido)) {
+        alert(`Partido não encontrado`)
+        objPolitico.codPartido = Number(prompt(`Informe um código de partido que exista`))
+    }
+    vetorPolitico.push(objPolitico)
+    alert('Político adicionado')
+}
+let votar = (vetorPolitico) => {
+    let codigoPartido = Number(prompt(`Informe o código do partido`))
+    let nomePolitico = prompt(`Informe o nome do político`)
+    // percorre o vetor
+    let achou = false
+    for(let i=0; i<vetorPolitico.length; i++) {
+        if (codigoPartido == vetorPolitico[i].codPartido && nomePolitico == vetorPolitico[i].nome) {
+            vetorPolitico[i].qtde++
+            alert(`Voto registrado com sucesso`)
+            achou = true
+        }
+    }
+    if (!achou){
+        alert('Político não encontrado')
+    }
+}
+// função principal
+let votacao = () => {
+    let vetorPP = []
+    let vetorPolitico = []
+    let opcao
+    do {
+        opcao = Number(prompt(`Informe: \n1. Cadastrar partido \n 2. Cadastrar político \n 3. Votar \n4. Sair`))
+        switch(opcao) {
+            case 1: cadastraPP(vetorPP)
+                    break
+            case 2: cadastraPolitico(vetorPolitico, vetorPP)
+                    break        
+            case 3: votar(vetorPolitico)
+                    break
+            case 4: alert('Obrigado por utilizar nosso programa')
+                    break
+            default: alert('Opção inválida')
+        }
+    }
+    while (opcao != 4)
+    console.log(vetorPP)
+}

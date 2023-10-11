@@ -105,7 +105,50 @@ table, th, td {
     flex-wrap: wrap;/*deixa dentro do espaço*/
     gap: 50px;
 }
-
+#tituloMatriz{
+    padding: 50px;
+    color: #f8f7f8;
+}
+#listaMatriz{
+    width: 100%;
+    height: 500px;
+    color: #f8f7f8;
+    margin-top: 400px;
+   
+}
+#Matriz{
+    width: 1150px;
+    height: 700px;
+    color: #f8f7f8;
+    border: #f8f7f8 solid 1px;
+    margin-left: 70px;
+    box-shadow: 1px 1px 10px 1px yellow;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;/*deixa dentro do espaço*/  
+}
+#tituloFuncao{
+    padding: 50px;
+    color: #f8f7f8;
+}
+#listaFuncao{
+    width: 100%;
+    height: 500px;
+    color: #f8f7f8;
+    margin-top: 400px;
+   
+}
+#Funcao{
+    width: 1150px;
+    height: 1000px;
+    color: #f8f7f8;
+    border: #f8f7f8 solid 1px;
+    margin-left: 70px;
+    box-shadow: 1px 1px 10px 1px yellow;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;/*deixa dentro do espaço*/  
+}
 .stylo{
     width: 150px;
     height: 80px;
@@ -141,10 +184,10 @@ table, th, td {
 #quad{
     padding: 20px;
     width: 500px;
-    height: 750px;
+    height: 950px;
     border-radius: 10%;
     background-color: rgb(255, 255, 255);
-    margin-left: 370px;
+    margin-left: 390px;
     margin-top: 80px;
     align-items: center;
     text-align: center;
@@ -156,7 +199,7 @@ table, th, td {
     padding: 0px;
     text-align: left;
     margin-top: 10px;
-    margin-left: 50px;
+    margin-left: 150px;
 }
 
 #entradaBut{
@@ -206,31 +249,32 @@ ul li a {
 #extra,#faltou,#ingresso, #tabuada{
     display: flex;
     margin-bottom: 50px;
-    margin-left: 30px;
+    margin-top: 20px;
     text-align: center;
     align-items: center; /*alinhamento na vertical */
     justify-content: center; /*alinhamento na horiz */
     padding: 16px 80px; /* 16px é top e bottom e 24px é right e left*/
-    background-color: rgb(236, 234, 231);/* 10% de transparencia */
+    background-color: rgb(255, 255, 255);/* 10% de transparencia */
     border: 1px solid black;/* 50% de transparencia */     /**/
-    border-radius: 8px;
+    border-radius: 0px;
     text-decoration: none;
     transition: background 0.2s;
+    width: 30px;
 }
 #calculaMedia,#calculaLosangoButtom, #calculaSalarioButtom, #calculaTabuadaButtom, #calculaIdadeButtom, #calculaNotaButtom, 
 #calculaNotaTabButtom,#calculaMaiorMenorButtom,#calculaMaiorMenorButtom2,#calculaEscolha,#calculaEscolha2,#calculaButtom,#calculaParesEImpares,
 #calcula{
     display: flex;
     margin-top: 50px;
-    margin-left: 70px;
+    margin-left: 85px;
     align-items: center; /*alinhamento na vertical */
     justify-content: center; /*alinhamento na horiz */
     padding: 16px 80px; /* 16px é top e bottom e 24px é right e left*/
     background-color: rgb(255, 255, 255);/* 10% de transparencia */
     border: 1px solid black;/* 50% de transparencia */     /**/
     border-radius: 30px;
-    width: 200px;
-    font-size: 20px;
+    width: 100px;
+    font-size: 18px;
  }
 
 #center{
@@ -255,8 +299,29 @@ button:hover {
     transition: 500ms;
     cursor: pointer;
 }
+.buttonFuncao{
+    width: 110px;
+    height: 80px;
+    border: #ffffff solid 1px;
+    background-color: rgb(255, 255, 255);
+    color: #302e2e;
+    border-radius: 40%;
+    box-shadow: 1px 1px 10px 1px rgb(231, 231, 23);
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 30px;
+    margin-top:100px;
+   
+
+}
+.buttonFuncao:hover {
+    box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #ffffff, inset 5px 5px 10px #ffffff, inset -5px -5px 10px #c2bfbf;
+    color: #000000;
+    transition: 500ms;
+    cursor: pointer;
+}
 @media screen and (max-width:500px){
-    
    body{
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
@@ -285,6 +350,8 @@ button:hover {
     }
     #tituloSelecao{
         color: #f8f7f8;
+        display: flex;
+        gap: 100px;
     }
     #listaSelecao{
         width: 100%;
@@ -304,16 +371,15 @@ button:hover {
         flex-wrap: wrap;/*deixa dentro do espaço*/
     }
     #tituloRepeticao{
-        
+        margin-top: 1550px;
+        gap: 50px;
+        display: flex;
         color: #f8f7f8;
-        margin-top: 1500px;
     }
     #listaRepeticao{
         width: 100%;
         height: 500px;
         color: #f8f7f8;
-      
-       
     }
     #Repeticao{
         width: 400px;
@@ -330,18 +396,68 @@ button:hover {
     #tituloVetores{
         padding: 50px;
         color: #f8f7f8;
-        margin-top: 1500px
+        margin-top: 1600px;
+        gap: 50px;
+        display: flex;
         
     }
     #listaVetores{
         width: 100%;
         height: 500px;
         color: #f8f7f8;
-       
-        
-       
     }
     #Vetores{
+        width: 400px;
+        height: 1850px;
+        color: #f8f7f8;
+        border: #f8f7f8 solid 1px;
+        margin-left: 10px;
+        box-shadow: 1px 1px 10px 1px yellow;
+        display: flex;
+        flex-wrap: wrap;/*deixa dentro do espaço*/
+        gap: 50px;
+        
+    }
+    #tituloMatriz{
+        padding: 50px;
+        color: #f8f7f8;
+        margin-top: 1500px;
+        display: flex;
+        gap: 100px;
+    }
+    #listaMatriz{
+        width: 100%;
+        height: 500px;
+        color: #f8f7f8;
+        margin-top: 200px;
+       
+    }
+    #Matriz{
+        width: 400px;
+        height: 1850px;
+        color: #f8f7f8;
+        border: #f8f7f8 solid 1px;
+        margin-left: 10px;
+        box-shadow: 1px 1px 10px 1px yellow;
+        display: flex;
+        flex-wrap: wrap;/*deixa dentro do espaço*/
+        gap: 50px;
+        
+    }
+    #tituloFuncao{
+        padding: 50px;
+        color: #f8f7f8;
+        margin-top: 1600px
+        
+    }
+    #listaFuncao{
+        width: 100%;
+        height: 500px;
+        color: #f8f7f8;
+        margin-top: 200px;
+       
+    }
+    #Funcao{
         width: 400px;
         height: 1850px;
         color: #f8f7f8;
@@ -396,8 +512,7 @@ button:hover {
         width: 380px;
         height: 850px;
         border-radius: 10%;
-       
-        margin-left: 0px;
+        margin-left: 1px;
         border: solid black 5px;
         margin-top: 10px;
         border: solid rgb(255, 255, 255) 1px;
@@ -408,7 +523,7 @@ button:hover {
         padding: 0px;
         text-align: left;
         margin-top: 10px;
-        margin-left: 10px;
+        margin-left: 100px;
         font-size: 15px;
     }
     
@@ -459,31 +574,33 @@ button:hover {
     #extra,#faltou,#ingresso, #tabuada{
         display: flex;
         margin-bottom: 50px;
-        margin-left: 20px;
+        margin-left: 0px;
         text-align: center;
         align-items: center; /*alinhamento na vertical */
         justify-content: center; /*alinhamento na horiz */
         padding: 16px 80px; /* 16px é top e bottom e 24px é right e left*/
-        background-color: rgb(236, 234, 231);/* 10% de transparencia */
+        background-color: rgb(255, 255, 255);/* 10% de transparencia */
         border: 1px solid black;/* 50% de transparencia */     /**/
-        border-radius: 8px;
+        border-radius: 0px;
         text-decoration: none;
         transition: background 0.2s;
+        width: 15px;
+        height: 5px;
     }
     #calculaMedia,#calculaLosangoButtom, #calculaSalarioButtom, #calculaTabuadaButtom, #calculaIdadeButtom, #calculaNotaButtom, 
     #calculaNotaTabButtom,#calculaMaiorMenorButtom,#calculaMaiorMenorButtom2,#calculaEscolha,#calculaEscolha2,#calculaButtom,#calculaParesEImpares,
     #calcula{
         display: flex;
         margin-top: 50px;
-        margin-left: 20px;
+        margin-left: 40px;
         align-items: center; /*alinhamento na vertical */
         justify-content: center; /*alinhamento na horiz */
         padding: 16px 80px; /* 16px é top e bottom e 24px é right e left*/
         background-color: rgb(255, 255, 255);/* 10% de transparencia */
         border: 1px solid black;/* 50% de transparencia */     /**/
         border-radius: 30px;
-        width: 200px;
-        font-size: 20px;
+        width: 100px;
+        font-size: 14px;
      }
     
     #center{
@@ -502,6 +619,9 @@ button:hover {
         border-radius: 30px;
         width: 10px;
         font-size: 15px;
+    }
+    .img{
+        display: none;
     }
 
 }
